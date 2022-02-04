@@ -1,0 +1,216 @@
+a {
+  text-decoration: none !important;
+}
+img {
+  max-width: 100%;
+}
+input[type="checkbox"] {
+  display: none;
+}
+/* nav */
+.navbar {
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1), 0 5px 5px rgba(0, 0, 0, 0.1) !important;
+}
+.logo {
+  width: 50px;
+}
+.navlink:hover {
+  border-bottom: 2px solid rgb(173, 64, 64) !important;
+  -ms-transform: scale(1.02);
+  -webkit-transform: scale(1.02);
+  transform: scale(1.02);
+}
+/* banner */
+.bg-images {
+  height: 100vh;
+  background-image: url("../images/bg1.jpg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  -webkit-animation: slidebgimg 15s linear infinite 0s;
+  -moz-animation: slidebgimg 15s linear infinite 0s;
+  -ms-animation: slidebgimg 15s linear infinite 0s;
+  -o-animation: slidebgimg 15s linear infinite 0s;
+  animation: slidebgimg 15s linear infinite 0s;
+  -webkit-animation-timing-function: ease-in-out;
+  -moz-animation-timing-function: ease-in-out;
+  -o-animation-timing-function: ease-in-out;
+  -ms-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+}
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: white;
+  font-size: 70px;
+  padding: 20rem;
+  font-weight: bolder;
+}
+
+/* banner animations */
+@keyframes slidebgimg {
+  0% {
+    background-image: url("../images/bg1.jpg");
+    -webkit-background-image: url("../images/bg1.jpg");
+    -moz-background-image: url("../images/bg1.jpg");
+    -o-background-image: url("../images/bg1.jpg");
+    -ms-background-image: url("../images/bg1.jpg");
+  }
+  25% {
+    background-image: url("../images/bg2.jpg");
+    -webkit-background-image: url("../images/bg2.jpg");
+    -moz-background-image: url("../images/bg2.jpg");
+    -o-background-image: url("../images/bg2.jpg");
+    -ms-background-image: url("../images/bg2.jpg");
+  }
+  50% {
+    background-image: url("../images/bg3.jpg");
+    -webkit-background-image: url("../images/bg3.jpg");
+    -ms-background-image: url("../images/bg3.jpg");
+    -o-background-image: url("../images/bg3.jpg");
+    -moz-background-image: url("../images/bg3.jpg");
+  }
+  100% {
+    background-image: url("../images/bg4.jpg");
+    -ms-background-image: url("../images/bg4.jpg");
+    -webkit-background-image: url("../images/bg4.jpg");
+    -moz-background-image: url("../images/bg4.jpg");
+    -o-background-image: url("../images/bg4.jpg");
+  }
+}
+
+/* cards */
+.border-side {
+  border-left: 0.1px solid rgba(211, 211, 211, 0.493);
+}
+.card-filtering:hover {
+  cursor: pointer;
+}
+.card-filtering i {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 30px;
+  display: none;
+}
+.card-filtering.active {
+  background-color: #eb3b3b !important;
+  color: black !important;
+}
+.card-filtering.active i {
+  display: block !important;
+}
+.card {
+  border-radius: 1rem !important;
+  transition: transform 0.5s;
+  /* smooth shadow */
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15), 0 4px 4px rgba(0, 0, 0, 0.15),
+    0 6px 6px rgba(0, 0, 0, 0.15), 0 8px 8px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, 0.15), 0 4px 4px rgba(0, 0, 0, 0.15),
+    0 6px 6px rgba(0, 0, 0, 0.15), 0 8px 8px rgba(0, 0, 0, 0.15);
+  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15),
+    0 6px 6px rgba(0, 0, 0, 0.15), 0 6px 6px rgba(0, 0, 0, 0.15),
+    0 10px 10px rgba(0, 0, 0, 0.15);
+}
+.card-img,
+.card-img-top {
+  border-top-left-radius: calc(1rem - 1px) !important;
+  border-top-right-radius: calc(1rem - 1px) !important;
+}
+.card:hover {
+  -ms-transform: scale(1.05);
+  -webkit-transform: scale(1.05);
+  transform: scale(1.05);
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .bg-images {
+    background-position: center;
+  }
+  .card-filtering i {
+    top: 2rem;
+    right: 0.5rem;
+    font-size: 20px;
+  }
+  .font-10 {
+    font-size: 10px;
+  }
+  .navlink:hover {
+    border-bottom: transparent !important;
+  }
+  .mysidebar {
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background-color: #302f38;
+    overflow-x: hidden;
+    transition: 0.2s;
+    padding-top: 5rem;
+  }
+
+  .mysidebar a {
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    display: block;
+    transition: 0.3s;
+  }
+  .mysidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 30px;
+    margin-left: auto;
+  }
+  .openbtn {
+    font-size: 2rem;
+    border: transparent;
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    content: "";
+    background: 50%/100% 100% no-repeat;
+    background-image: url("../images/bar-chart-fill.svg") !important;
+    transform: rotate(270deg);
+  }
+
+  #navResponsive {
+    transition: margin-left 0.5s;
+    padding: 16px;
+  }
+}
+
+@media (max-width: 576px) {
+  body {
+    overflow-x: hidden !important;
+  }
+  .title {
+    padding: 20rem 0rem;
+  }
+  .openbtn {
+    font-size: 1.5rem;
+  }
+}
+@media (max-width: 425px) {
+  .title {
+    font-size: 50px;
+  }
+  .h5 {
+    font-size: 0.9rem !important;
+  }
+}
+
+@media (max-width: 320px) {
+  .title {
+    font-size: 40px;
+    padding: 15rem 0;
+  }
+}
